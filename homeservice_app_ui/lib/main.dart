@@ -1,5 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:homeservice_app_ui/core/color.dart';
+import 'package:homeservice_app_ui/screens/onboarding/pages/onboarding_page.dart';
+import 'package:homeservice_app_ui/screens/tab_bar/pages/tab_bar_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized;
@@ -13,12 +17,16 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    final isLoggedIn = FirebaseAuth.instance.currentUser != null;
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'Tasky',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        textTheme: TextTheme(bodyText1: TextStyle(color: AppColors.textColor)),
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+        scaffoldBackgroundColor: Colors.white
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: isLoggedIn ? const TabBarPage() : const OnboardingPage()
     );
   }
 }

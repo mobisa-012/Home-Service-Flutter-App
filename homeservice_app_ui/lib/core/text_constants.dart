@@ -28,5 +28,8 @@ class TextConstants {
   static const int roomsNumber4 = 4;
   static const int roomsNumber5 = 5;
   static const String onboardingTilesDescription = 'Get your Home Service from qualified professionals';
-   static const String onboardingTilesTitle = 'Home Service';
+  static const String onboardingTilesTitle = 'Home Service';
+  static const String homeIcon = 'Home';
+  static const String accountIcon = 'Account';
+  static const String taskIcon = 'Tasks';
 }
