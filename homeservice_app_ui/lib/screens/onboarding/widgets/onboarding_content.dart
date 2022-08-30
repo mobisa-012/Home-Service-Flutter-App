@@ -1,5 +1,3 @@
-// ignore_for_file: avoid_types_as_parameter_names
-
 import 'dart:js';
 
 import 'package:dots_indicator/dots_indicator.dart';
@@ -32,7 +30,7 @@ class OnboardingContent extends StatelessWidget {
     );
   }
 
-  Widget _createPageView(PageController, OnboardingBloc) {
+  Widget _createPageView(PageController controller, OnboardingBloc bloc) {
     return PageView(
         scrollDirection: Axis.horizontal,
         controller: controller,
