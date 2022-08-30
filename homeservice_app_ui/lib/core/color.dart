@@ -11,5 +11,6 @@ class AppColors {
   static Color iconOnSelectColor = const Color(0xFFffffff);
   static Color iconOnUnselectColor = const Color.fromARGB(255, 240, 119, 169);
   static Color textColor = const Color.fromARGB(255, 241, 135, 188);
-
+  static Color dotsColor= const Color.fromARGB(123, 236, 226, 225);
+  static const dotsActiveColor = Color(0xFF6358E1);
 }
