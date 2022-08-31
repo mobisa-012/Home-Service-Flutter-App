@@ -1,12 +1,18 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:homeservice_app_ui/core/const/color.dart';
 import 'package:homeservice_app_ui/screens/onboarding/pages/onboarding_page.dart';
 import 'package:homeservice_app_ui/screens/tab_bar/pages/tab_bar_page.dart';
 
 void main() async {
-  runApp( const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  // sets apps orientation
+  SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+  await Firebase.initializeApp();
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -17,14 +23,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final isLoggedIn = FirebaseAuth.instance.currentUser != null;
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Tasky',
-      theme: ThemeData(
-        textTheme: TextTheme(bodyText1: TextStyle(color: AppColors.textColor)),
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-        scaffoldBackgroundColor: Colors.white
-      ),
-      home: isLoggedIn ? const TabBarPage() : const OnboardingPage()
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'Tasky',
+        theme: ThemeData(
+            textTheme:
+                TextTheme(bodyText1: TextStyle(color: AppColors.textColor)),
+            visualDensity: VisualDensity.adaptivePlatformDensity,
+            scaffoldBackgroundColor: Colors.white),
+        home: isLoggedIn ? const TabBarPage() : const OnboardingPage());
   }
 }
