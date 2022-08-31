@@ -18,6 +18,7 @@ class TextConstants {
   static const String furnitures2 = 'Sofa';
   static const String furnitures3 = 'Chair';
   static const String furnitures4 = 'AC';
+  static const String nmasonry = 'Masonry';
   static const String orderDetails = 'Order Details';
   static const String itemPageTitle = 'Item';
   static const String confitmButtonText = 'Confirm';
