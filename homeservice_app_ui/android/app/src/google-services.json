@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "44763612212",
+    "project_id": "tasky-43af8",
+    "storage_bucket": "tasky-43af8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:44763612212:android:fa4cba6e52351533c93661",
+        "android_client_info": {
+          "package_name": "com.example.homeservice_app_ui"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "44763612212-fsoiquug7v4h0692tsmmo0blcbdb8fub.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNHsOKdTJa94z7Nb0e6JmZYtAoigrTMOg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "44763612212-fsoiquug7v4h0692tsmmo0blcbdb8fub.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
