@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:homeservice_app_ui/screens/home/bloc/homepage_bloc.dart';
 import 'package:homeservice_app_ui/screens/home/bloc/homepage_state.dart';
+import 'package:homeservice_app_ui/screens/home/widgets/home_content.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -14,17 +15,18 @@ class HomePage extends StatelessWidget {
       body: _buildContext(context),
     );
   }
-  BlocProvider<HomeBloc> _buildContext (BuildContext context){
+
+  BlocProvider<HomeBloc> _buildContext(BuildContext context) {
     return BlocProvider<HomeBloc>(
       create: (BuildContext context) => HomeBloc(),
       child: BlocConsumer<HomeBloc, HomeState>(
-        buildWhen: (_,currState) => currState is HomeInitial,
+        buildWhen: (_, currState) => currState is HomeInitial,
         builder: (context, state) {
-          return HomeContent(),
+          return const HomeContent();
         },
-        listenWhen: (_,currState) => true,
-        listener: (context, state){ },
+        listenWhen: (_, currState) => true,
+        listener: (context, state) {},
       ),
-      );
+    );
   }
 }
