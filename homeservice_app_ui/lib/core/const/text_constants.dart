@@ -1,18 +1,23 @@
 class TextConstants {
+  static const String welcome = 'Welcome';
+  //prepare cleaning page
+  static const String complexCleaning = 'Complex Cleaning';
+  static const String simpleCleaning = 'Simple Cleaning';
+  static const String selectType = 'Select type';
   static const String prepareCleaning = 'Prepare Cleaning';
-  static const String otherServices = 'Other Services';
-  static const String otherServicesCarService = 'Vehicle';
-  static const String otherServicesPainting = 'Painting';
-  static const String otherServicesLabourService = 'Labour Service';
+  //Home screen all category card
   static const String allCategory = 'All Category';
   static const String allCategory1 = 'Commercial and Shifting';
   static const String allCategory2 = 'Car and Vehicles';
   static const String allCategory3 = 'Office Shifting';
   static const String allCategory4 = 'Home Shifting';
-  static const String welcome = 'Welcome';
-  static const String selectType = 'Select type';
   static const String viewFullProfile = 'View Full Profile';
   static const String cleaningTime = 'Cleaning Time';
+  //home screen other services card
+  static const String otherServices = 'Other Services';
+  static const String otherServicesCarService = 'Vehicle';
+  static const String otherServicesPainting = 'Painting';
+  static const String otherServicesLabourService = 'Gardening Service';
   static const String furnitures = 'Furnitures';
   static const String furnitures1 = 'Bed';
   static const String furnitures2 = 'Sofa';

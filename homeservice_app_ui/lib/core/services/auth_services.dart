@@ -51,7 +51,7 @@ String getExceptionMessage(FirebaseAuthException e) {
     case 'wrong password':
     return 'Password is incorrect';
     case 'requires-recent-login' :
-    return 'Lof in again before trying this request';
+    return 'Log in again before trying this request';
     default: 
     return e.message ?? 'Error';
   }
