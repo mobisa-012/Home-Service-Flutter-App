@@ -10,6 +10,8 @@ class AppColors {
   static Color labourService = const Color.fromARGB(255, 13, 141, 245);
   static Color iconOnSelectColor = const Color(0xFFffffff);
   static Color iconOnUnselectColor = const Color.fromARGB(255, 240, 119, 169);
+  static Color containerOfferColor = const Color.fromARGB(255, 240, 64, 137);
+  static Color containerOfferColor2 = const Color.fromARGB(255, 161, 88, 245);
   static Color textColor = const Color.fromARGB(255, 241, 135, 188);
   static Color welcometextColor = const Color.fromARGB(255, 19, 17, 18);
   static Color displayNameTextColor = const Color.fromARGB(216, 190, 184, 187);

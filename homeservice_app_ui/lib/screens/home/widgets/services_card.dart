@@ -33,7 +33,10 @@ class ServicesCard extends StatelessWidget {
                       children: [
                         const SizedBox(height: 5),
                         Text(
-                          services.title
+                          services.title,
+                          style: TextStyle(
+                            color: 
+                          ),
                         )
                       ],
                     )],

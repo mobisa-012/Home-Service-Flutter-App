@@ -11,6 +11,7 @@ import 'package:homeservice_app_ui/screens/edit_account_screen/page/edit_account
 import 'package:homeservice_app_ui/screens/home/bloc/homepage_bloc.dart';
 import 'package:homeservice_app_ui/screens/home/bloc/homepage_state.dart';
 import 'package:homeservice_app_ui/screens/home/bloc/homepages_event.dart';
+import 'package:homeservice_app_ui/screens/home/widgets/services_card.dart';
 
 class HomeContent extends StatelessWidget {
   const HomeContent({Key? key}) : super(key: key);
@@ -72,8 +73,7 @@ class HomeContent extends StatelessWidget {
             BlocBuilder<HomeBloc, HomeState>(
                 buildWhen: (_, currState) => currState is ReloadImageState,
                 builder: (context, state) {
-                  final photoURL =
-                      FirebaseAuth.instance.currentUser?.photoURL;
+                  final photoURL = FirebaseAuth.instance.currentUser?.photoURL;
                   return GestureDetector(
                     child: photoURL == null
                         ? const CircleAvatar(
@@ -97,15 +97,45 @@ class HomeContent extends StatelessWidget {
                       await Navigator.of(context).push(MaterialPageRoute(
                           builder: (_) => const EditAccountScreen()));
                       // ignore: use_build_context_synchronously
-                      BlocProvider.of<HomeBloc>(context).add(ReloadImageEvent());
+                      BlocProvider.of<HomeBloc>(context)
+                          .add(ReloadImageEvent());
                     },
                   );
                 }),
           ],
         ));
   }
- Widget _createServicesCard (BuildContext context) {
-  
- }
 
+  Widget _createServicesCard(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Text(
+            TextConstants.allCategory,
+            style: TextStyle(
+              color: AppColors.welcometextColor,
+              fontSize: 18,
+              fontWeight:   FontWeight.bold,
+            ),
+          ),          
+          ),
+          const SizedBox(height: 10),
+          Container(
+            height: 160,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: [
+                const SizedBox(width: 20),
+                ServicesCard(
+                  onTap: onTap, 
+                  services: services, 
+                  color: AppColors.containerOfferColor
+              ],
+            ),
+          ),
+      ],
+    );
+  }
 }
