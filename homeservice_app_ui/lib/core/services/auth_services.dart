@@ -23,7 +23,7 @@ class AuthService {
       throw Exception(e);
     }
   }
-  static Future<User> signIn (String email, String password) async {
+  static Future<User> signIn(String email, String password) async {
     try {
       final UserCredential result = await auth.signInWithEmailAndPassword(email: email.trim(), password: password.trim());
       final User ? user = result.user;
@@ -43,6 +43,7 @@ class AuthService {
     await auth.signOut();
   }
 }
+
 String getExceptionMessage(FirebaseAuthException e) {
   print(e.code);
   switch (e.code) {

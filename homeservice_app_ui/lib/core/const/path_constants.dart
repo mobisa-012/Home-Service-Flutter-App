@@ -6,4 +6,5 @@ class PathConstants {
   static const String notificationIcon = 'assets/icons/notifications.png';
   static const String arrowIcon = 'assets/icons/arrow_back.png';
   static const String profileAvatar = 'assets/images/home/profile.png';
+  static const String eye = 'assets/images/auth/eye_icon.png';
 }

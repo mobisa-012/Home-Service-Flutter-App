@@ -131,7 +131,8 @@ class HomeContent extends StatelessWidget {
                 ServicesCard(
                   onTap: onTap, 
                   services: services, 
-                  color: AppColors.containerOfferColor
+                  color: AppColors.containerOfferColor,
+                )
               ],
             ),
           ),

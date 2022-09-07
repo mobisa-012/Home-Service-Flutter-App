@@ -42,4 +42,25 @@ class TextConstants {
   static const String newButton = 'New';
   static const String trendingIconButton = 'Trending';
   static const String topServicesButton = 'Top Services';
+
+  //Sign In Page, Sign Out and Sign Up
+  static const String signIn = 'Sign In';
+  static const String signOut = 'Sign Out';
+  static const String signup = 'Sign Up';
+  static const String username = 'Username';
+  static const String usernamePlaceholder = 'Your name';
+  static const String usernameError = 'Please enter your name';
+  static const String email = 'Email';
+  static const String emailPlaceholder = 'you@gmail.com';
+  static const String emailInvalid = 'Invalid email. Please enter the email properly';
+  static const String password = 'Password';
+  static const String forgotPassword = 'Forgot password';
+  static const String passwordPlaceholderSignIn = 'Enter your password';
+  static const String passwordPlaceholder = 'at least 6 symbols';
+  static const String passwordInvalid = 'Password should have a te least 6 characters';
+  static const String confirmPassword = 'Confirm Password';
+  static const String confirmPasswordPlaceholder = 'Re-enter your password';
+  static const String confirmPasswordInvalid = 'Password does not match';
+  static const String alreadyHaveAnAccount = 'Already have an account?';
+  static const String doNotHaveAnAccount = 'Do not have an account?';
 }
