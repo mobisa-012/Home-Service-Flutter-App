@@ -5,7 +5,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:homeservice_app_ui/screens/onboarding/bloc/onboarding_bloc.dart';
 import 'package:homeservice_app_ui/screens/onboarding/bloc/onboarding_state.dart';
 import 'package:homeservice_app_ui/screens/onboarding/widgets/onboarding_content.dart';
-import 'package:homeservice_app_ui/screens/sign_up_page/page/sign_up_page.dart';
 
 class OnboardingPage extends StatelessWidget {
   const OnboardingPage({Key? key}) : super(key: key);
